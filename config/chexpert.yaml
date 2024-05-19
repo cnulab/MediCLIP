@@ -1,0 +1,60 @@
+version: v1.0.0
+random_seed: 100
+
+data_root: data
+
+train_dataset: chexpert
+test_datasets: [chexpert]
+
+epoch: 200
+batch_size: 8
+
+print_freq_step: 10
+val_freq_epoch: 1
+
+image_size: 224
+model_name: ViT-L-14
+layers_out: [12,18,24]
+
+anomaly_tasks:
+  CutpasteTask: 0.25
+  GaussIntensityChangeTask: 0.25
+  SourceTask: 0.25
+  IdentityTask: 0.25
+
+
+prompt_maker: coop
+n_learnable_token: 8
+CSC: True
+class_token_positions: [end]
+
+
+save_root: results
+
+prompts:
+  normal: [
+    normal,
+    healthy,
+    negative,
+    unremarkable,
+    clear,
+    asymptomatic,
+    normal findings,
+    no findings,
+    in good health,
+    no evidence of disease
+  ]
+
+  abnormal: [
+        abnormal,
+        positive,
+        symptomatic,
+        disease,
+        lesion,
+        pathological,
+        impaired,
+        evidence of disease,
+        abnormal finding,
+        pathological condition,
+        pathological abnormality
+  ]
