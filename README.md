@@ -1,7 +1,6 @@
 # MediCLIP
 
-**💡 This is the official implementation of the paper ["MediCLIP: Adapting CLIP for Few-shot Medical
-Image Anomaly Detection"]()**.  
+**💡 This is the official implementation of the paper "MediCLIP: Adapting CLIP for Few-shot Medical Image Anomaly Detection"(MICCAI 2024) [[arxiv]](https://arxiv.org/abs/2405.11315)**.  
 
 MediCLIP is an efficient few-shot medical image anomaly detection method, demonstrating SOTA anomaly detection performance with very few normal medical images. MediCLIP integrates learnable prompts, adapters, and realistic medical image anomaly synthesis tasks.
    
@@ -47,5 +46,12 @@ Code reference: **[[CLIP]](https://github.com/OpenAI/CLIP)**  **[[CoOp]](https:/
 
 If this work is helpful to you, please cite it as:
 ```
-coming soon.
+@inproceedings{zhang2024mediclip,
+      title={MediCLIP: Adapting CLIP for Few-shot Medical Image Anomaly Detection}, 
+      author={Ximiao Zhang, Min Xu, Dehui Qiu, Ruixin Yan, Ning Lang, and Xiuzhuang Zhou},
+      year={2024},
+      eprint={2405.11315},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
